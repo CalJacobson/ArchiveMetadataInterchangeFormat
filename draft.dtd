@@ -1,0 +1,359 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT itemMetadata (id,name,description?,collection?,category?,tags?,file,ownership?,(versioning|(copyright,license))?)>
+<!ATTLIST itemMetadata
+    xmlns CDATA #FIXED ''
+    version CDATA #REQUIRED>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT collection (id,name,order)>
+<!ATTLIST collection
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT category (#PCDATA)>
+<!ATTLIST category
+    xmlns CDATA #FIXED ''
+    id CDATA #REQUIRED>
+
+<!ELEMENT tags (tag)+>
+<!ATTLIST tags
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT file (mimeType,filename,filesize,(imageMetadata,thumbnail)?,duration?,(audioMetadata|videoMetadata)?)>
+<!ATTLIST file
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT ownership (organization|author+)>
+<!ATTLIST ownership
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT versioning (currentVersion,history)>
+<!ATTLIST versioning
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT copyright (#PCDATA)>
+<!ATTLIST copyright
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT license (name,url)>
+<!ATTLIST license
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT order (#PCDATA)>
+<!ATTLIST order
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT tag (#PCDATA)>
+<!ATTLIST tag
+    xmlns CDATA #FIXED ''
+    id CDATA #REQUIRED>
+
+<!ELEMENT filename (#PCDATA)>
+<!ATTLIST filename
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT filesize (#PCDATA)>
+<!ATTLIST filesize
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT imageMetadata (exif)>
+<!ATTLIST imageMetadata
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT thumbnail (width,height,mimeType,base64)>
+<!ATTLIST thumbnail
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT audioMetadata (codec,bitrate,channels,album,artist,bpm,year)>
+<!ATTLIST audioMetadata
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT videoMetadata (stream)+>
+<!ATTLIST videoMetadata
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT organization (id,name,phone,url)>
+<!ATTLIST organization
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT author (id,lastName,firstName,(phone|url|emailAddress))>
+<!ATTLIST author
+    xmlns CDATA #FIXED ''
+    primary NMTOKEN #IMPLIED>
+
+<!ELEMENT currentVersion (versionNumber,versionDateTime,versionStatus)>
+<!ATTLIST currentVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT history (version)+>
+<!ATTLIST history
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exif (manufacturer,model,orientation,software,datetime,yCbCrPositioning,compression,xResolution,yResolution,resolutionUnit,exposureTime,fNumber,exposureProgram,exifVersion,datetimeOriginal,datetimeDigitized,componentsConfiguration,compressedBpp,exposureBias,maxApertureValue,meteringMode,flash,focalLength,makerNote,flashpixVersion,colorSpace,pixelXDimension,pixelYDimension,fileSource,interoperabilityIndex,interoperabilityVersion,whiteBalance,gps)>
+<!ATTLIST exif
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT base64 (#PCDATA)>
+<!ATTLIST base64
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT album (#PCDATA)>
+<!ATTLIST album
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT artist (#PCDATA)>
+<!ATTLIST artist
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT bpm (#PCDATA)>
+<!ATTLIST bpm
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT year (#PCDATA)>
+<!ATTLIST year
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT stream (id,(codec|type)+,((channels,sampleRate,bitsPerSample)|(resolution,framerate)),bitrate)>
+<!ATTLIST stream
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT lastName (#PCDATA)>
+<!ATTLIST lastName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT firstName (#PCDATA)>
+<!ATTLIST firstName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT emailAddress (#PCDATA)>
+<!ATTLIST emailAddress
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version (versionNumber,versionDateTime,versionStatus)>
+<!ATTLIST version
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT manufacturer (#PCDATA)>
+<!ATTLIST manufacturer
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT model (#PCDATA)>
+<!ATTLIST model
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT orientation (#PCDATA)>
+<!ATTLIST orientation
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT software (#PCDATA)>
+<!ATTLIST software
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT datetime (#PCDATA)>
+<!ATTLIST datetime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT yCbCrPositioning (#PCDATA)>
+<!ATTLIST yCbCrPositioning
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT compression (#PCDATA)>
+<!ATTLIST compression
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT xResolution (#PCDATA)>
+<!ATTLIST xResolution
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT yResolution (#PCDATA)>
+<!ATTLIST yResolution
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT resolutionUnit (#PCDATA)>
+<!ATTLIST resolutionUnit
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exposureTime (#PCDATA)>
+<!ATTLIST exposureTime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT fNumber (#PCDATA)>
+<!ATTLIST fNumber
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exposureProgram (#PCDATA)>
+<!ATTLIST exposureProgram
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exifVersion (#PCDATA)>
+<!ATTLIST exifVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT datetimeOriginal (#PCDATA)>
+<!ATTLIST datetimeOriginal
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT datetimeDigitized (#PCDATA)>
+<!ATTLIST datetimeDigitized
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT componentsConfiguration (#PCDATA)>
+<!ATTLIST componentsConfiguration
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT compressedBpp (#PCDATA)>
+<!ATTLIST compressedBpp
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exposureBias (#PCDATA)>
+<!ATTLIST exposureBias
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT maxApertureValue (#PCDATA)>
+<!ATTLIST maxApertureValue
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT meteringMode (#PCDATA)>
+<!ATTLIST meteringMode
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT flash (#PCDATA)>
+<!ATTLIST flash
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT focalLength (#PCDATA)>
+<!ATTLIST focalLength
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT makerNote (#PCDATA)>
+<!ATTLIST makerNote
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT flashpixVersion (#PCDATA)>
+<!ATTLIST flashpixVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT colorSpace (#PCDATA)>
+<!ATTLIST colorSpace
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT pixelXDimension (#PCDATA)>
+<!ATTLIST pixelXDimension
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT pixelYDimension (#PCDATA)>
+<!ATTLIST pixelYDimension
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT fileSource (#PCDATA)>
+<!ATTLIST fileSource
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT interoperabilityIndex (#PCDATA)>
+<!ATTLIST interoperabilityIndex
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT interoperabilityVersion (#PCDATA)>
+<!ATTLIST interoperabilityVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT whiteBalance (#PCDATA)>
+<!ATTLIST whiteBalance
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT gps (altitude,latitude,longitude)>
+<!ATTLIST gps
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT type (#PCDATA)>
+<!ATTLIST type
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT sampleRate (#PCDATA)>
+<!ATTLIST sampleRate
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT bitsPerSample (#PCDATA)>
+<!ATTLIST bitsPerSample
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT resolution (width,height)>
+<!ATTLIST resolution
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT framerate (#PCDATA)>
+<!ATTLIST framerate
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT altitude (#PCDATA)>
+<!ATTLIST altitude
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT latitude (#PCDATA)>
+<!ATTLIST latitude
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT longitude (#PCDATA)>
+<!ATTLIST longitude
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+    xmlns CDATA #FIXED ''
+    autogenerated NMTOKEN #IMPLIED>
+
+<!ELEMENT mimeType (#PCDATA)>
+<!ATTLIST mimeType
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT width (#PCDATA)>
+<!ATTLIST width
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT height (#PCDATA)>
+<!ATTLIST height
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT codec (#PCDATA)>
+<!ATTLIST codec
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT channels (#PCDATA)>
+<!ATTLIST channels
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT bitrate (#PCDATA)>
+<!ATTLIST bitrate
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT url (#PCDATA)>
+<!ATTLIST url
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT versionNumber (#PCDATA)>
+<!ATTLIST versionNumber
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT versionDateTime (#PCDATA)>
+<!ATTLIST versionDateTime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT versionStatus (#PCDATA)>
+<!ATTLIST versionStatus
+    xmlns CDATA #FIXED ''
+    id CDATA #REQUIRED>
