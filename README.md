@@ -1,6 +1,6 @@
 # Archive Metadata Interchange Format  
 
-An XML-based metadata file format.  Intended for use by a document management system targeting individuals, families and small groups.
+An XML-based metadata file format.  Intended for use by [Zibaldone](https://github.com/CalJacobson/Zibaldone).
 
 ## Frequently-Asked Questions (FAQ)
 
