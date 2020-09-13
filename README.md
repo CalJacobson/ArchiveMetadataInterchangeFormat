@@ -1,6 +1,6 @@
 # Archive Metadata Interchange Format  
 
-An XML-based metadata file format.  Intended for use by [Zibaldone](https://github.com/CalJacobson/Zibaldone).
+An XML-based metadata file format.  Intended for use by [CoBoo](https://github.com/CalJacobson/CoBoo).
 
 ## Frequently-Asked Questions (FAQ)
 
